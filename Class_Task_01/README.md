@@ -37,7 +37,7 @@ Instead of guessing the interval ([a, b]), we loop through a wider range (e.g., 
 
 ---
 
-####  C++ Code Snippet (Conceptual)
+####  C++ Code Snippet
 
 ```cpp
 for (float i = 0; i <= 10; i += 0.1){
