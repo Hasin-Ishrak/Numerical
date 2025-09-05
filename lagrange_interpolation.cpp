@@ -5,6 +5,7 @@ using namespace std;
 #define ll long long
 ll n;
 void lagrange(){
+    
     vector<double>x(n),y(n);
     for(ll i=0;i<n;i++) cin>>x[i]>>y[i];
     
