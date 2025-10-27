@@ -28,11 +28,23 @@ float simpson13(float a,float b,float n){
     return (h/3)*sm;
 }
 
+float simpson38(float a,float b,float n){
+    float h=(b-a)/n;
+    float sm=f(a)+f(b),sm1=0,sm2=0;
+    for(int i=1;i<n;i++){
+        if(i%3==0) sm1+=f(a+i*h);
+        else sm2+=f(a+i*h);
+    }
+    sm+=(3*sm2);
+    sm+=(2*sm1);
+    return ((h*3)/8)*sm;
+}
+
 int main(){
     fast;
     float a,b,n;
     cin>>a>>b>>n;
     cout<<"Trapezoidal "<<trapezoidal(a,b,n)<<'\n';
     cout<<"Simpson 1/3 "<<simpson13(a,b,n)<<'\n';
-
+    cout<<"simpson 3/8 "<<simpson38(a,b,n)<<'\n'; 
 }
